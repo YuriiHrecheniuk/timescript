@@ -17,6 +17,9 @@ const MONTHS = [
 ]
 
 export function formatDate(format: string, date: Date): string {
+    if (format.includes('.'))
+        throw "Invalid format string. Use YY, YYYY, MMM, MM, DD, D seperated by '-'"
+
     const year = date.getFullYear()
     const monthIndex = date.getMonth()
     const day = date.getDate()

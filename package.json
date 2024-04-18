@@ -1,21 +1,26 @@
 {
-  "name": "timescript",
+  "name": "@yurii_hrecheniuk/timescript",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "dev": "tsx watch ./src/index.ts",
-    "build": "rimraf dist && tsc"
+    "build": "rimraf dist && tsc",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@ajar/marker": "^1.3.3",
     "@types/node": "^20.12.7",
+    "@vitest/coverage-v8": "^1.5.0",
     "rimraf": "^5.0.5",
     "tsx": "^4.7.2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "@ajar/marker": "^1.3.3"
+  }
 }
